@@ -10,19 +10,62 @@
 .menu li:hover{
     color: #330606;;
 }
-.menu-responsivo{
+.btn{
     display: none;
 }
 
 @media (max-width: 960px){
-    .menu{
-        display: none;
-    }
-    .menu-responsivo{
-        
+    
+    #btn-mobile{
         display: flex;
-        font-size: 1.5rem;
-        text-align: right;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .hamburguer{
+        width: 20px;
+        border-top: 2px solid;
         color: #fff;
+    }
+    .hamburguer::after, .hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active .hamburguer{
+        border-top-color: transparent;
+    }
+    #nav.active .hamburguer::after{
+        transform: rotate(135deg);
+    }
+    #nav.active .hamburguer::before{
+        transform: rotate(-135deg);
+        top: 7px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-color: #000;
+        height: 0px;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active .menu{
+        visibility: visible;
+        height: 15vh;
+        overflow-y: auto;
+    }
+    .menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
     }
 }

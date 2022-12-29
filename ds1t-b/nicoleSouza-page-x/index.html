@@ -36,10 +36,10 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
     <header>
-        <nav>
-            <div class="menu-responsivo">
-                <a href="#"><i class="fa-solid fa-bars"></i></a>
-            </div>
+        <nav id="nav">
+                <button aria-label="Abrir menu" class="btn" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                    <span class="hamburguer"></span>
+                </button>
             <ul class="menu">
                 <li>
                     <a href="#home">Ínicio</a>
@@ -349,6 +349,7 @@
             <img src="img/x-logo-footer.png" alt="">
         </div>
     </footer>
+    <script src="menu-mobile.js"></script>
 </body>
 
 </html>
