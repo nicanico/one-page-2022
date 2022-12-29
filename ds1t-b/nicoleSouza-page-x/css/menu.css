@@ -65,7 +65,9 @@
         overflow-y: auto;
     }
     .menu a{
-        padding: 1rem 0;
-        margin: 0 1rem;
+        
+        margin-left: 1rem;
+        margin-bottom: 30px;
+        
     }
 }
